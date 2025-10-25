@@ -4,10 +4,10 @@ from PIL import Image, ImageDraw, ImageFont
 import matplotlib.pyplot as plt
 import io
 import pandas as pd
+
 def click_element(element):
     open_script = f"<script type = 'text/javascript'>window.parent.document.querySelector('[id^=tabs-bui][id$=-{element}]').click();</script>"
     html(open_script, width=0, height=0)
-
 
 sample = {'Body Type': 2,
  'Sex': 0,
@@ -59,6 +59,7 @@ def input_preprocessing(data):
     data["Waste Bag Size"] = data["Waste Bag Size"].map({'small':0, 'medium':1, "large":2,  "extra large":3})
     data["Energy efficiency"] = data["Energy efficiency"].map({'No':0, 'Sometimes':1, "Yes":2})
     return data
+
 def hesapla(model,ss, sample_df):
     copy_df = sample_df.copy()
     travels = copy_df[["Frequency of Traveling by Air",

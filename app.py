@@ -62,7 +62,7 @@ def component():
                                                                                               Vegetarian: Diet excludes meat but includes plant-based foods.\n
                                                                                               Vegan: Avoids all animal products, including meat, dairy, and eggs.""")
     social = tab1.selectbox('Social Activity', ['never', 'often', 'sometimes'], help="How often do you go out?")
-
+#########
     transport = tab2.selectbox('Transportation', ['public', 'private', 'walk/bicycle'],
                                help="Which transportation method do you prefer the most?")
     if transport == "private":
@@ -81,10 +81,12 @@ def component():
                                                                                                                              Rarely: Around 1-4 Hours.\n
                                                                                                                              Frequently: Around 5 - 10 Hours.\n
                                                                                                                              Very Frequently: Around 10+ Hours. """)
-
+##############
     waste_bag = tab3.selectbox('What is the size of your waste bag?', ['small', 'medium', 'large', 'extra large'])
     waste_count = tab3.slider('How many waste bags do you trash out in a week?', 0, 10, 0)
     recycle = tab3.multiselect('Do you recycle any materials below?', ['Plastic', 'Paper', 'Metal', 'Glass'])
+
+########
 
     heating_energy = tab4.selectbox('What power source do you use for heating?', ['natural gas', 'electricity', 'wood', 'coal'])
 
@@ -92,7 +94,7 @@ def component():
     energy_efficiency = tab4.selectbox('Do you consider the energy efficiency of electronic devices?', ['No', 'Yes', 'Sometimes' ])
     daily_tv_pc = tab4.slider('How many hours a day do you spend in front of your PC/TV?', 0, 24, 0)
     internet_daily = tab4.slider('What is your daily internet usage in hours?', 0, 24, 0)
-
+######
     shower = tab5.selectbox('How often do you take a shower?', ['daily', 'twice a day', 'more frequently', 'less frequently'])
     grocery_bill = tab5.slider('Monthly grocery spending in $', 0, 500, 0)
     clothes_monthly = tab5.slider('How many clothes do you buy monthly?', 0, 30, 0)
@@ -154,7 +156,7 @@ pop = """
 """
 col2.markdown(pop, unsafe_allow_html=True)
 
-if home.button("🏡"):
+if home.button(" 🏡 "):
     click_element('tab-0')
 _,resultmid,_ = result.columns([1,2,1])
 

@@ -9,7 +9,7 @@ asttokens==2.0.8
 astunparse==1.6.3
 async-generator==1.10
 attrs==22.1.0
-audioread==3.0.0
+audioread==2.1.9
 Babel==2.10.3
 backcall==0.2.0
 bcrypt==4.0.1
